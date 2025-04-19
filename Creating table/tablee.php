@@ -23,3 +23,24 @@
  }
  echo "</table>";
 ?>
+
+ 
+
+<?php
+$line = $_POST["line"];
+$col = $_POST["col"];
+echo "<table border='1'>";
+for($l=1;$l<=$line;$l++){
+    if($l % 2 == 0){
+        echo "<tr bgcolor='orange'>";
+    }
+    else{
+        echo "<tr bgcolor='yellow'>";
+    }
+    for($c=1;$c<=$col;$c++){
+        echo "<td>$l - $c</td>";
+     }
+    echo "</tr>";
+}
+echo "</table>";
+?>
